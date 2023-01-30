@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constants</title>
+</head>
+
+<body>
+    <script>
+        /*************************************************************
+         * constant values can not be changed and must be initialised
+         * **********************************************************/
+        const pi = 3.142; // global variable
+
+        function area_of_circle(radius) {
+            // the value of pi can be overriden here b'se it will be in the local scope of the function
+            const pi = 10
+            const area = pi * radius * radius
+            console.log(`The area of the circle is ${area}`)
+        }
+        area_of_circle(5)
+
+        // print the value of pi in the global scope.
+        console.log(`The value of pi in the global scope is ${pi}`)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets</title>
+</head>
+
+<body>
+    <script>
+        /********************************************************************************
+         * Sets are a new data structure we can use in es6 and are used to store a set of unique values of whatever type.
+         
+         * Sets eliminate any duplicate values added to them.
+         ********************************************************************************/
+
+        var names = new Set();
+        // use the add method() to add new values to the set
+        names.add("James").add("Peter").add("Paul").add("Crystall")
+        console.log(names)
+
+        // get the size of the set
+        console.log('size of the set is: ', names.size) // value = 4
+
+        // Delete a single value from a set
+        names.delete('Crystall')
+        // get the size of the set after deletion
+        console.log('size of the set is: ', names.size) // value = 3
+
+        // Delete all the values from the set
+        names.clear()
+        // get the size of the set after clearing all the values from the set
+        console.log('size of the set is: ', names.size) // value =0
+
+
+        // Add new values to the set
+        names.add('Timothy').add('Ronald').add('Jude').add('Marcus').add('Richie').add('Cynthia')
+
+        // get the size of the newly created set
+        console.log('size of the newly set is: ', names.size) // value = 6
+
+        // checking for existance of a value in a set.
+        console.log('The name Jude exists in the newly created set', names.has('Jude'))
+
+        // Removing duplicate elements from an array using sets
+        var ninjas = new Array('Shaun', 'Crystall', 'Yoshi', 'Mongolia', 'li', 'Shaun', 'Yoshi')
+
+        var refined_ninjas = new Set(ninjas)
+        console.log(refined_ninjas)
+        console.log([...refined_ninjas])
+
+    </script>
+</body>
+
+</html>

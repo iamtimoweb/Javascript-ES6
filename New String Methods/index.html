@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New string Methods</title>
+</head>
+
+<body>
+    <script>
+        var str = 'Good Morning!'
+
+        /******************
+         * Repeat method
+         * ****************/
+        console.log(str.repeat(5))
+
+        /******************
+        * startswith method
+        *****************/
+
+        // checking whether a string starts with certain characters
+        // startswith() method: return boolean.
+        console.log('The string starts with Good', str.startsWith('Good'))
+
+        // checking at a specific position.
+        console.log('The string starts with Morn at position 5', str.startsWith('Morn', 5))
+
+        /******************
+        * endswith method
+        *****************/
+        // endswith() method: return boolean.
+        console.log('The string ends with !', str.endsWith('!'))
+
+        // checking at a specific position.
+        console.log('The string ends with ing at position 13', str.endsWith('ing!', 13))
+
+        /******************
+        * includes() method
+        *****************/
+        var date = "The date today is Monday"
+        console.log(`The word "Monday" exists in the date string: ${date.includes('Monday')}`)
+        console.log(`The word "Monday" exists in the date string at position 18: ${date.includes('Monday', 18)}`)
+    </script>
+</body>
+
+</html>

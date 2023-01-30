@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+
+<body>
+    <script>
+        /*******************
+         * Generators are function which we can play and pause whenever we want so that we can have ultimate control over the flow of them
+         **/
+
+        // creating a regular function and later turn it into a generator
+        let gen = function () {
+            console.log('pear')
+            console.log('banana')
+            console.log('apple')
+        }
+        gen();
+
+        // Making the gen() into a generator, put an asterik * infront of the function key word
+        gen = function* () {
+            console.log('Generator prints passion fruits')
+
+            yield console.log('Generator prints pawpaw') // the iterator function will pause here due to the yield keyword
+            console.log('Generator prints pineapples')
+        }
+        let myGen = gen() // returns an iterator that will be stored in myGen variable.
+
+        // The variable myGen now has the next() method which can be used to play the gen() function
+        myGen.next();
+
+    </script>
+</body>
+
+</html>

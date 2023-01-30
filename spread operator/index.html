@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+
+<body>
+    <script>
+        /*************************************************************************
+         *  Spread operator is used to spread and array into individual components
+         * ***********************************************************************/
+
+        var stud_names1 = ['Allan', 'Miley', 'Richard']
+        var stud_names2 = ['Rebecca', 'Damba', 'Whitney']
+
+        var stud_names = [...stud_names1, ...stud_names2]
+
+        console.log('The student names are', stud_names)
+
+        // Getting the sum of numbers
+        function add(a, b, c) {
+            console.log('The sum of the numbers is ', (a + b + c))
+        }
+
+        var nos = [20, 75, 5]
+        add(...nos)
+
+    </script>
+</body>
+
+</html>

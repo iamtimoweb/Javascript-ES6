@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literal Improvements</title>
+</head>
+
+<body>
+    <script>
+        const name = "Timo Web";
+        const age = 30;
+        const specialty = 'Developer'
+        const academics = 'ADSE'
+
+        var student = {
+            /*************es5***************/
+            name: name,
+            age: age,
+            academicDetails: function () {
+                console.log(`My name is ${this.name} and i have an a ${this.academics} diploma`)
+            },
+            /*************es6***************/
+            specialty,
+            academics,
+            workDetails() {
+                console.log(`My name is ${this.name} and i am a ${this.specialty}`)
+            }
+        }
+        student.academicDetails();
+        student.workDetails()
+    </script>
+</body>
+
+</html>

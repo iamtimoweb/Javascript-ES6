@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constants</title>
+</head>
+
+<body>
+    <script>
+        /**************************************************************************
+         * The var keyword creates a variable whicn ignores the local scope within a code block
+         * ************************************************************************/
+
+        // example 1
+        var x = 10
+        if (x > 5) {
+            var x = 5 // The value of x will be changed gloabally and will be 5
+        }
+        console.log('The value of x is ', x) // x = 5
+
+        /**************************************************************************
+        * The let keyword creates a variable with local or global scope depending on the code block.
+        **************************************************************************/
+        var y = 20
+        if (y > 5) {
+            let y = 10 // The value of y is local to the if block and cannot be changed globally
+        }
+        console.log('The value of y is ', y) // y = 20
+
+    </script>
+</body>
+
+</html>
